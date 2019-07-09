@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Главная</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/tpl/css/script.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/tpl/css/main.css" />
+</head>
+<body>
+	<section class="wrapper container">
+		<div class="row">
+			<div class="col-md-8 col-sm-8">
+				<div class="form-inline" id="search">
+					<div class="form-group">
+						<label class="sr-only" for="search">Search</label>
+						<input type="text" class="form-control" name="search" id="search" placeholder="Find by name...">
+					</div>
+					
+					<button  class="btn btn-default">Search</button>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<button class="btn btn-primary" data-toggle="modal" data-target="#addnew">
+					Add New
+				</button>
+			</div>
+		</div>
+		<div class="responsive">
+			<table id="table" class="table responsive-table table-hover">
+				<thead>
+					<tr>
+						<td>
+							Name
+							<span>&#x25BC;</span>
+						</td>
+						<td>
+							Price
+							<span>&#x25BC;</span>
+						</td>
+						<td>
+							Actions
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="table_line">
+						<td class="name">
+							<span class="name">Aame tovar1</span>
+							<b class="badge">42</b>
+						</td>
+						<td class="price">
+							$<span>25,172.54</span>
+						</td>
+						<td>
+							<button class="btn btn-warning Edit">Edit</button>
+							<button class="btn btn-danger Delite">Delite</button>
+						</td>
+					</tr>
+					<tr class="table_line">
+						<td class="name">
+							<span class="name">Bame tovar2</span>
+							<b class="badge">2</b>
+						</td>
+						<td class="price">
+							$<span>5,112</span>
+						</td>
+						<td>
+							<button class="btn btn-warning Edit">Edit</button>
+							<button class="btn btn-danger Delite">Delite</button>
+						</td>
+					</tr>
+					<tr class="table_line">
+						<td class="name">
+							<span class="name">Same tovar3</span>
+							<b class="badge">4</b>
+						</td>
+						<td class="price">
+							$<span>172.4</span>
+						</td>
+						<td>
+							<button class="btn btn-warning Edit">Edit</button>
+							<button class="btn btn-danger Delite">Delite</button>
+						</td>
+					</tr>
+					<tr class="table_line">
+						<td class="name">
+							<span class="name">Same tovar3</span>
+							<b class="badge">11</b>
+						</td>
+						<td class="price">
+							$<span>192</span>
+						</td>
+						<td>
+							<button class="btn btn-warning Edit">Edit</button>
+							<button class="btn btn-danger Delite">Delite</button>
+						</td>
+					</tr>
+				</tbody>	
+			</table>
+		</div>
+		
+	</section>
+	
+
+
+<!-- Modal -->
+<div class="modal fade" id="addnew" tabindex="-1" role="dialog" data-backdrop='static' aria-labelledby="addnewLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title" id="addnewLabel">Add New</h4>
+		</div>
+		<div class="modal-body">
+			<div id="add_table">
+				<form class="form " method="dialog" id="fromadd">
+					<div class="form-group">
+						<label for="name" class="control-label">Name:</label>
+						<input type="text" id="name" name="name" class="form-control">
+						<div class="error-box"></div>
+					</div>
+					<div class="form-group">
+						<label for="count" class="control-label">Count:</label>
+						<input type="text" id="count" name="count" class="form-control" >
+						<div class="error-box"></div>
+					</div>
+					<div class="form-group">
+						<label for="price" class="control-label">Price:</label>
+						<input type="text" id="price" name="price" class="form-control">
+						<div class="error-box"></div>
+					</div>
+					<div class="form-group btn-group">
+						<button class="btn btn-default" type="submit" id="add">
+							Add
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="confirm" data-backdrop='static' tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title" id="confirmLabel">Are you sere?</h4>
+		</div>
+		<div class="modal-body text-center">
+			<p>Are you sure you want to do this</p>
+		</div>
+		<div class="modal-footer">
+			<button type="button" id="delline" class="btn btn-danger" data-dismiss="modal">Yes</button>
+			<button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+		</div>
+		</div>
+	</div>
+</div>
+
+	<script src="assets/tpl/js/script.js"></script> 
+	<script src="assets/tpl/js/main.js"></script> 
+</body>
+</html>

@@ -1,0 +1,45 @@
+// width
+=r($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+
+=rmin($width)
+  @media only screen and (min-width: $width+ "px")
+    @content
+
+// height
+=rh($height)
+  @media only screen and (max-height: $height + "px")
+    @content
+
+=rhmin($height)
+  @media only screen and (min-height: $height + "px")
+    @content
+
+
+//simple gradient
+=g($color1, $color2)
+  background-image: linear-gradient($color1, $color2)
+
+=gh($color1, $color2)
+  background-image: linear-gradient(left, $color1, $color2)
+
+// font-family 
+=font($alias, $name)
+  @font-face
+    font-family: $alias
+    src: url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".woff") format("woff")
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+// to use:
+//+font(black, cytiapro-black-webfont)
+
+
+=clearfix
+  &:after
+    content: " "
+    display: table
+    clear: both
+
+
